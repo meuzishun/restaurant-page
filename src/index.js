@@ -4,6 +4,6 @@ import { contactLoad } from "./contact.js";
 
 const content = document.querySelector('#content');
 
-let container = contactLoad();
+let container = pageLoad();
 
 content.appendChild(container);

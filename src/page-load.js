@@ -1,7 +1,6 @@
 console.log('Hello from the otherside');
 
 function pageLoad() {
-    // const content = document.querySelector('#content');
     const homeContent = document.createElement('div');
     homeContent.classList.add('container');
     homeContent.classList.add('home-container');
@@ -9,11 +8,7 @@ function pageLoad() {
     const heading = document.createElement('h1');
     heading.textContent = 'Burgers, Tacos and Pizza';
 
-    // const emph = document.createElement('i');
-    // emph.textContent = 'really'; 
-
     const text1 = document.createElement('p');
-    // text1.textContent = 'We know what you <i>really</i> want to eat... ';
     text1.textContent = 'We know what you really want to eat... ';
 
     const text2 = document.createElement('p');
