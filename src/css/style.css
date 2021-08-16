@@ -10,6 +10,11 @@ body {
     background-color: #111;
 }
 
+#content {
+    width: 100vw;
+    min-height: 100vh;
+}
+
 nav {
     display: flex;
     justify-content: center;
@@ -24,11 +29,6 @@ nav p {
 nav p:hover {
     text-decoration: underline;
     cursor: pointer;
-}
-
-#content {
-    width: 100vw;
-    min-height: 100vh;
 }
 
 .container {

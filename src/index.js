@@ -1,8 +1,28 @@
-import { pageLoad } from "./page-load.js";
-import { menuLoad } from "./menu.js";
-import { contactLoad } from "./contact.js";
+import './css/style.css';
+import { pageLoad } from "./js/page-load.js";
+import { menuLoad } from "./js/menu.js";
+import { contactLoad } from "./js/contact.js";
 
 const content = document.querySelector('#content');
+
+const navbar = document.createElement('nav');
+
+const homeBtn = document.createElement('p');
+homeBtn.textContent = 'Home';
+navbar.appendChild(homeBtn);
+
+const menuBtn = document.createElement('p');
+menuBtn.textContent = 'Menu';
+navbar.appendChild(menuBtn);
+navbar.appendChild(menuBtn);
+
+const contactBtn = document.createElement('p');
+contactBtn.textContent = 'Contact';
+navbar.appendChild(contactBtn);
+
+console.log(navbar);
+
+content.appendChild(navbar);
 
 let container = pageLoad();
 

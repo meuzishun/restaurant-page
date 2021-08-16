@@ -1,4 +1,7 @@
 console.log('Hello from the otherside');
+import burger from '../img/burger.jpg';
+import tacos from '../img/tacos.jpeg';
+import pizza from '../img/pizza.jpg';
 
 function pageLoad() {
     const homeContent = document.createElement('div');
@@ -17,21 +20,21 @@ function pageLoad() {
     const imageContainer = document.createElement('div');
     imageContainer.classList.add('image-container');
 
-    const burgerImage = document.createElement('img');
-    burgerImage.src = './burger.jpg';
+    const burgerImage = new Image();
+    burgerImage.src = burger;
     burgerImage.alt = 'burger-image';
     burgerImage.setAttribute('width', '25%');
     imageContainer.appendChild(burgerImage);
     
-    const tacosImage = document.createElement('img');
-    tacosImage.src = './tacos.jpeg';
+    const tacosImage = new Image();
+    tacosImage.src = tacos;
     tacosImage.alt = 'tacos-image';
     tacosImage.alt = 'tacos-image';
     tacosImage.setAttribute('width', '50%');
     imageContainer.appendChild(tacosImage);
     
-    const pizzaImage = document.createElement('img');
-    pizzaImage.src = './pizza.jpg';
+    const pizzaImage = new Image();
+    pizzaImage.src = pizza;
     pizzaImage.alt = 'pizza-image';
     pizzaImage.setAttribute('width', '75%');
     imageContainer.appendChild(pizzaImage);
