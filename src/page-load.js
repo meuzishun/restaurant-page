@@ -1,40 +1,52 @@
+console.log('Hello from the otherside');
+
 function pageLoad() {
-    const content = document.querySelector('.content');
+    // const content = document.querySelector('#content');
+    const homeContent = document.createElement('div');
+    homeContent.classList.add('container');
+    homeContent.classList.add('home-container');
+
     const heading = document.createElement('h1');
     heading.textContent = 'Burgers, Tacos and Pizza';
 
-    const emph = document.createElement('i');
-    emph.textContent = 'really';
+    // const emph = document.createElement('i');
+    // emph.textContent = 'really'; 
 
     const text1 = document.createElement('p');
-    text1.textContent = 'We know what you ' + emph + ' want to eat... ';
+    // text1.textContent = 'We know what you <i>really</i> want to eat... ';
+    text1.textContent = 'We know what you really want to eat... ';
 
     const text2 = document.createElement('p');
-    text2.textContent = 'Come get fat with us! We promise you will leave regreting your every decision!';
+    text2.textContent = 'Come get fat with us! We promise that you will leave regretting every decision!';
 
     const imageContainer = document.createElement('div');
+    imageContainer.classList.add('image-container');
 
     const burgerImage = document.createElement('img');
     burgerImage.src = './burger.jpg';
     burgerImage.alt = 'burger-image';
-    burgerImage.width = '25%';
+    burgerImage.setAttribute('width', '25%');
     imageContainer.appendChild(burgerImage);
     
     const tacosImage = document.createElement('img');
     tacosImage.src = './tacos.jpeg';
     tacosImage.alt = 'tacos-image';
     tacosImage.alt = 'tacos-image';
-    tacosImage.width = '50%';
+    tacosImage.setAttribute('width', '50%');
     imageContainer.appendChild(tacosImage);
     
     const pizzaImage = document.createElement('img');
     pizzaImage.src = './pizza.jpg';
     pizzaImage.alt = 'pizza-image';
-    pizzaImage.width = '75%';
+    pizzaImage.setAttribute('width', '75%');
     imageContainer.appendChild(pizzaImage);
 
-    content.appendChild(heading);
-    content.appendChild(text1);
-    content.appendChild(text2);
-    content.appendChild(imageContainer);
+    homeContent.appendChild(heading);
+    homeContent.appendChild(text1);
+    homeContent.appendChild(text2);
+    homeContent.appendChild(imageContainer);
+
+    return homeContent;
 }
+
+export { pageLoad };

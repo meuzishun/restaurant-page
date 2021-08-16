@@ -1,1 +1,1 @@
-console.log("Is there anybody in there?");
+(()=>{"use strict";console.log("Hello from the otherside"),console.log("Hello from the menu");const e=document.querySelector("#content");let t=function(){const e=document.createElement("div");return homeContent.classList.add("container"),homeContent.classList.add("menu-container"),e}();e.appendChild(t)})();
