@@ -1,4 +1,4 @@
-import './css/style.css';
+import './css/style.min.css';
 import { pageLoad } from "./js/page-load.js";
 import { menuLoad } from "./js/menu.js";
 import { contactLoad } from "./js/contact.js";
@@ -20,9 +20,7 @@ const contactBtn = document.createElement('p');
 contactBtn.textContent = 'Contact';
 navbar.appendChild(contactBtn);
 
-console.log(navbar);
-
-content.appendChild(navbar);
+document.body.insertBefore(navbar, content);
 
 let container = pageLoad();
 
