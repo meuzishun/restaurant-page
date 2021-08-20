@@ -1,9 +1,9 @@
-console.log('Hello from the menu');
 
 function menuLoad() {
     const menuContent = document.createElement('div');
-    homeContent.classList.add('container');
-    homeContent.classList.add('menu-container');
+    menuContent.classList.add('container');
+    menuContent.classList.add('menu-container');
+    menuContent.textContent = 'This is the menu';
 
     return menuContent;
 }

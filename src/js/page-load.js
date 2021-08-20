@@ -1,4 +1,4 @@
-console.log('Hello from the otherside');
+
 import burger from '../img/burger.jpg';
 import tacos from '../img/tacos.jpeg';
 import pizza from '../img/pizza.jpg';

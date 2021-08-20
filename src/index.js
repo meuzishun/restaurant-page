@@ -4,24 +4,37 @@ import { menuLoad } from "./js/menu.js";
 import { contactLoad } from "./js/contact.js";
 
 const content = document.querySelector('#content');
-
 const navbar = document.createElement('nav');
+navbar.addEventListener('click', handleNavbtnClick);
 
-const homeBtn = document.createElement('p');
-homeBtn.textContent = 'Home';
-navbar.appendChild(homeBtn);
+function changeContent(e) {
+    const oldContainer = content.querySelector('.container');
+    if (oldContainer) {
+        content.removeChild(oldContainer);
+    }
+    const newContainer = e.target.callback();
+    content.appendChild(newContainer);
+}
 
-const menuBtn = document.createElement('p');
-menuBtn.textContent = 'Menu';
-navbar.appendChild(menuBtn);
-navbar.appendChild(menuBtn);
+function handleNavbtnClick(e) {
+    if (e.target.matches('p')) {
+        changeContent(e);
+    }
+}
 
-const contactBtn = document.createElement('p');
-contactBtn.textContent = 'Contact';
-navbar.appendChild(contactBtn);
+function createNavBtn(elem, text, cb) {
+    const navBtn = document.createElement(elem);
+    navBtn.textContent = text;
+    navBtn.callback = cb;
+    navBtn.addEventListener('click', changeContent);
+    navbar.appendChild(navBtn);
+    return navBtn;
+}
+
+const homeBtn = createNavBtn('p', 'Home', pageLoad);
+const menuBtn = createNavBtn('p', 'Menu', menuLoad);
+const contactBtn = createNavBtn('p', 'Contact', contactLoad);
 
 document.body.insertBefore(navbar, content);
 
-let container = pageLoad();
-
-content.appendChild(container);
+content.appendChild(pageLoad());

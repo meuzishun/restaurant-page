@@ -1,9 +1,9 @@
-console.log('Hello from the contact');
 
 function contactLoad() {
     const contactContainer = document.createElement('div');
-    homeContent.classList.add('container');
-    homeContent.classList.add('contact-container');
+    contactContainer.classList.add('container');
+    contactContainer.classList.add('contact-container');
+    contactContainer.textContent = 'this is the contact';
 
     return contactContainer;
 }
