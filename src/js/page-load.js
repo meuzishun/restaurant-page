@@ -29,7 +29,6 @@ function pageLoad() {
     const tacosImage = new Image();
     tacosImage.src = tacos;
     tacosImage.alt = 'tacos-image';
-    tacosImage.alt = 'tacos-image';
     tacosImage.setAttribute('width', '50%');
     imageContainer.appendChild(tacosImage);
     

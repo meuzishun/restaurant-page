@@ -16,9 +16,19 @@ function changeContent(e) {
     content.appendChild(newContainer);
 }
 
+function addSelectedColor(e) {
+    navbar.querySelectorAll('p').forEach(btn => {
+        if (btn.classList.contains('selected')) {
+            btn.classList.remove('selected');
+        }
+    });
+    e.target.classList.add('selected');
+}
+
 function handleNavbtnClick(e) {
     if (e.target.matches('p')) {
         changeContent(e);
+        addSelectedColor(e);
     }
 }
 
@@ -34,6 +44,8 @@ function createNavBtn(elem, text, cb) {
 const homeBtn = createNavBtn('p', 'Home', pageLoad);
 const menuBtn = createNavBtn('p', 'Menu', menuLoad);
 const contactBtn = createNavBtn('p', 'Contact', contactLoad);
+
+homeBtn.classList.add('selected');
 
 document.body.insertBefore(navbar, content);
 
