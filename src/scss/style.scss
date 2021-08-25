@@ -74,11 +74,19 @@ body {
         .menu-container {
 
             .item-container {
-                width: 50%;
-                margin-bottom: 3rem;
+                width: 30%;
+                margin-bottom: 5rem;
+                display: flex;
+                flex-direction: column;
 
                 .item-image {
                     border-radius: 50%;
+                    align-self: center;
+                    margin-bottom: 1rem;
+                }
+
+                .Burgers-image {
+                    width: 300px;
                 }
             }
         }

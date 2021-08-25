@@ -22,6 +22,7 @@ function menuLoad() {
 
         const itemImage = new Image();
         itemImage.classList.add('item-image');
+        itemImage.classList.add(`${itemName}-image`);
         itemImage.src = image;
         itemImage.alt = `${itemName}-image`;
         itemImage.setAttribute('width', '100%');
