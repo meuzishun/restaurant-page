@@ -45,8 +45,8 @@ const homeBtn = createNavBtn('p', 'Home', pageLoad);
 const menuBtn = createNavBtn('p', 'Menu', menuLoad);
 const contactBtn = createNavBtn('p', 'Contact', contactLoad);
 
-homeBtn.classList.add('selected');
 
 document.body.insertBefore(navbar, content);
 
-content.appendChild(pageLoad());
+content.appendChild(menuLoad());
+contactBtn.classList.add('selected');
